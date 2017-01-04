@@ -1,0 +1,5 @@
+.*~
+*.elc
+backups
+elpa
+/session.*
