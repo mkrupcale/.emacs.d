@@ -1,4 +1,4 @@
-;;; init.el --- GNU Emacs Init file
+;;; init-tidy.el --- Init file to load Emacs interface to the HTML Tidy program
 ;;
 ;; Author: Matthew Krupcale <mkrupcale@matthewkrupcale.com>
 ;;
@@ -22,30 +22,15 @@
 ;; OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 ;; SOFTWARE.
 
-;(package-initialize)
+(require 'req-package)
 
-(require 'package)
+;; tidy interface
 
-;; Set file for Emacs customization information
-(setq custom-file "~/.emacs.d/custom.el")
-(load custom-file)
+(req-package tidy :commands (tidy-buffer
+			     tidy-parse-config-file
+			     tidy-save-settings
+			     tidy-describe-options))
 
-;; Add all libraries and packages inside `~/.emacs.d/elisp/' and its subdirs to
-;; the load-path
-(let ((default-directory "~/.emacs.d/elisp/"))
-  (normal-top-level-add-to-load-path '("."))
-  (normal-top-level-add-subdirs-to-load-path))
+(add-hook 'nxml-mode-hook (lambda () (tidy-build-menu nxml-mode-map)))
 
-(global-font-lock-mode 1) ;; Enable FontLock-mode
-(winner-mode 1) ;; Enable winner-mode
-(setq column-number-mode t) ;; Show column number
-(setq-default fill-column 80) ;; Default to fill width 80
-
-;; Activate Cua-mode
-(cua-mode t)
-(setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
-(transient-mark-mode 1) ;; No region when it is not highlighted
-(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
-
-;; postpone real initialization until after ELPA is loaded
-(add-hook 'after-init-hook (lambda () (load-library "after-init")))
+(provide 'init-tidy)
