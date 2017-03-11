@@ -1,4 +1,4 @@
-;;; init-yaml.el --- Init file to load Emacs markdown mode
+;;; init-markdown.el --- Init file to load Emacs markdown mode
 ;;
 ;; Author: Edward E. Knyshov
 ;;
