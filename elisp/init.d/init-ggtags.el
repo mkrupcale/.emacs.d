@@ -1,4 +1,4 @@
-;;; init-modes.el --- Init file to load Emacs modes
+;;; init-ggtags.el --- Init file to load Emacs ggtags mode
 ;;
 ;; Author: Matthew Krupcale <mkrupcale@matthewkrupcale.com>
 ;;
@@ -22,9 +22,15 @@
 ;; OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 ;; SOFTWARE.
 
-(load-library "init-cc")
-(load-library "init-ggtags")
-(load-library "init-markdown")
-(load-library "init-mcnp")
-(load-library "init-php")
-(load-library "init-yaml")
+(require 'req-package)
+
+;; Enable ggtags-mode for C/C++/Java/ASM modes
+
+(req-package ggtags
+  :config
+  (add-hook 'c-mode-common-hook
+	    (lambda ()
+	      (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
+		(ggtags-mode 1)))))
+
+(provide 'init-ggtags)
