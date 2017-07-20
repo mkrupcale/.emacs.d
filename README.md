@@ -18,4 +18,4 @@ Custom Emacs Lisp can be added to the `~/.emacs.d/elisp` directory. Files partic
 
 ## License
 
-Most of the code in this repository is licensed under the MIT license. Exceptions to this are the [Emacs configs](https://github.com/edvorg/emacs-configs) by Edward E. Knyshov (license unspecified) and the MCNP mode, which is GPLv2+.
+Most of the code in this repository is licensed under the MIT license. Exceptions to this are the [Emacs configs](https://github.com/edvorg/emacs-configs) by Edward E. Knyshov (LGPLv3+) and the MCNP mode (GPLv2+).
