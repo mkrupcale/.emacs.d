@@ -50,6 +50,7 @@
 
 (load-library "init-modes") ;; load Emacs modes
 (load-library "init-backup-autosave") ;; backup and autosave settings
+(load-library "init-helm") ;; load Emacs Helm completion/selection framework
 (load-library "init-tidy") ;; load Emacs tidy interface
 
 ;; Finish required packages dependency loading

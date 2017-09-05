@@ -1,8 +1,8 @@
-;;; init-modes.el --- Init file to load Emacs modes
+;;; init-helm.el --- Init file to load Emacs Helm package
 ;;
 ;; Author: Matthew Krupcale <mkrupcale@matthewkrupcale.com>
 ;;
-;; Copyright 2016 Matthew Krupcale <mkrupcale@matthewkrupcale.com>
+;; Copyright 2017 Matthew Krupcale <mkrupcale@matthewkrupcale.com>
 ;;
 ;; Permission is hereby granted, free of charge, to any person obtaining a copy
 ;; of this software and associated documentation files (the "Software"), to deal
@@ -22,11 +22,11 @@
 ;; OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 ;; SOFTWARE.
 
-(load-library "init-cc")
-(load-library "init-ggtags")
-(load-library "init-markdown")
-(load-library "init-mcnp")
-(load-library "init-php")
-(load-library "init-yaml")
+(require 'req-package)
 
-(which-function-mode 1) ;; displays current function name in mode line
+(req-package helm
+  :bind (("C-c r" . helm-recentf)
+	 ("C-c y" . helm-show-kill-ring))
+  :config (require 'helm-config))
+
+(provide 'init-helm)
