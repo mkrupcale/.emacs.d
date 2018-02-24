@@ -10,6 +10,7 @@
 (load-library "init-markdown")
 (load-library "init-mcnp")
 (load-library "init-php")
+(load-library "init-rust")
 (load-library "init-yaml")
 
 (which-function-mode 1) ;; displays current function name in mode line
