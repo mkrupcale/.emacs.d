@@ -5,7 +5,9 @@
 ;; Copyright 2016 Matthew Krupcale <mkrupcale@matthewkrupcale.com>
 ;;
 
+(load-library "init-bnf")
 (load-library "init-cc")
+(load-library "init-ebnf")
 (load-library "init-ggtags")
 (load-library "init-markdown")
 (load-library "init-mcnp")
