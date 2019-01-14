@@ -9,6 +9,8 @@
 
 ;; php mode
 
-(req-package php-mode :mode "\\.php\\'")
+(req-package php-mode
+  :ensure t
+  :mode "\\.php\\'")
 
 (provide 'init-php)

@@ -8,6 +8,7 @@
 (require 'req-package)
 
 (req-package helm
+  :ensure t
   :bind (("C-c r" . helm-recentf)
 	 ("C-c y" . helm-show-kill-ring))
   :config (require 'helm-config))

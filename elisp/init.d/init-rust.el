@@ -9,6 +9,8 @@
 
 ;; rust mode
 
-(req-package rust-mode :mode "\\.rs\\'")
+(req-package rust-mode
+  :ensure t
+  :mode "\\.rs\\'")
 
 (provide 'init-rust)

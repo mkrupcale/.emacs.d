@@ -10,6 +10,7 @@
 ;; Enable ggtags-mode for C/C++/Java/ASM modes
 
 (req-package ggtags
+  :ensure t
   :config
   (add-hook 'c-mode-common-hook
 	    (lambda ()

@@ -11,7 +11,8 @@
 
 ;; Set file for Emacs customization information
 (setq custom-file "~/.emacs.d/custom.el")
-(load custom-file)
+(when (file-exists-p custom-file)
+  (load-file custom-file))
 
 ;; Add all libraries and packages inside `~/.emacs.d/elisp/' and its subdirs to
 ;; the load-path

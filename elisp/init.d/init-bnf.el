@@ -9,6 +9,6 @@
 
 ;; bnf mode
 
-(req-package bnf-mode :loader :path :mode "\\.bnf\\'")
+(req-package bnf-mode :mode "\\.bnf\\'")
 
 (provide 'init-bnf)

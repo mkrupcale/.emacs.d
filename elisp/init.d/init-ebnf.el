@@ -9,6 +9,6 @@
 
 ;; ebnf mode
 
-(req-package ebnf-mode :loader :path :mode "\\.ebnf\\'")
+(req-package ebnf-mode :mode "\\.ebnf\\'")
 
 (provide 'init-ebnf)

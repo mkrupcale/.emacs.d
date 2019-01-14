@@ -10,6 +10,7 @@
 ;; clang format
 
 (req-package clang-format
+  :ensure t
   :commands clang-format-region)
 
 ;; completion with clang
@@ -19,7 +20,6 @@
     (c-offsets-alist . ((innamespace . [0])))))
 
 (req-package cc-mode
-  :loader :built-in
   :config
   (c-add-style "cc-style" cc-style)
   (setq-default c-basic-offset 4)

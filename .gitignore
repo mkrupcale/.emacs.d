@@ -1,6 +1,6 @@
 .*~
 *.elc
 /backups
-/custom.el
+/custom.el*
 /elpa
 /session.*

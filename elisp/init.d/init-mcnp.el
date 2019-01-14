@@ -9,6 +9,6 @@
 
 ;; mcnp mode
 
-(req-package mcnpgen-mode :loader :path :mode "\\.mcnp\\'")
+(req-package mcnpgen-mode :mode "\\.mcnp\\'")
 
 (provide 'init-mcnp)
