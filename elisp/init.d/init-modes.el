@@ -9,6 +9,7 @@
 (load-library "init-cc")
 (load-library "init-ebnf")
 (load-library "init-ggtags")
+(load-library "init-go")
 (load-library "init-markdown")
 (load-library "init-mcnp")
 (load-library "init-php")
