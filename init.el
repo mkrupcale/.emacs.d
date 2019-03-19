@@ -25,6 +25,8 @@
 (setq column-number-mode t) ;; Show column number
 (setq-default fill-column 80) ;; Default to fill width 80
 
+(setq user-mail-address "mkrupcale@matthewkrupcale.com")
+
 ;; Activate Cua-mode
 (cua-mode t)
 (setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
