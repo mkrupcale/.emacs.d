@@ -4,3 +4,5 @@
 /custom.el*
 /elpa
 /session.*
+/tramp
+/url
