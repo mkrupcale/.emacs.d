@@ -1,5 +1,6 @@
 .*~
 *.elc
+/.lsp-session*
 /backups
 /custom.el*
 /elpa
