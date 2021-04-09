@@ -10,13 +10,13 @@
 (require 'package)
 
 ;; Set file for Emacs customization information
-(setq custom-file "~/.emacs.d/custom.el")
+(setq custom-file (concat user-emacs-directory "custom.el"))
 (when (file-exists-p custom-file)
   (load-file custom-file))
 
-;; Add all libraries and packages inside `~/.emacs.d/elisp/' and its subdirs to
+;; Add all libraries and packages inside `elisp/' and its subdirs to
 ;; the load-path
-(let ((default-directory "~/.emacs.d/elisp/"))
+(let ((default-directory (concat user-emacs-directory "elisp/")))
   (normal-top-level-add-to-load-path '("."))
   (normal-top-level-add-subdirs-to-load-path))
 
