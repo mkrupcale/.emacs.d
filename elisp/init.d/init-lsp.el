@@ -11,6 +11,8 @@
 
 (req-package lsp-mode
   :ensure t
+  :require
+  yasnippet
   :init (setq lsp-keymap-prefix "C-c l")
   :hook ((f90-mode . lsp-deferred))
   :commands (lsp lsp-deferred))

@@ -17,5 +17,6 @@
 (load-library "init-php")
 (load-library "init-rust")
 (load-library "init-yaml")
+(load-library "init-yasnippet")
 
 (which-function-mode 1) ;; displays current function name in mode line
