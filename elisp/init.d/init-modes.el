@@ -14,6 +14,7 @@
 (load-library "init-lsp")
 (load-library "init-markdown")
 (load-library "init-mcnp")
+(load-library "init-ocaml")
 (load-library "init-php")
 (load-library "init-rust")
 (load-library "init-yaml")
